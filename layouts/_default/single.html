@@ -7,7 +7,26 @@
 {{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
 </header>
 <div class="content">
+
+	!!!!! repo
+
+	[][][][][][][] 
+
+	===== .GetMatch "header"
+
+{{ with .Resources.GetMatch "header" }}
+  <img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
+{{ end }}
+
+{{ .Resources.Match "images/*" }}
+
 {{ .Content }}
+
+<h2>attached images</h2>
+{{ partial "attached-images.html" . }}
+<hr />
+
+{{ partial "attached-readme.html" . }}
 </div>
 
 <div class="content content--bottom">
@@ -16,5 +35,8 @@
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
 </div>
 </article>
+
+{{ partial "build-date.html" }}
 </main>
+
 {{ end }}
