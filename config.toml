@@ -25,6 +25,7 @@ enableInlineShortcodes = true
 name = "CouldBeThis"
 # url = "https://example.org/somepage"
 # avatar = "path/to/some-image.jpg"
+  ghrepo = "CouldBeThis/xxx"
 
 [outputFormats.SearchIndex]
 mediaType = "application/json"
