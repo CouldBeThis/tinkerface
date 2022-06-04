@@ -8,23 +8,31 @@
 </header>
 <div class="content">
 
-{{/* make into a partial   */}}
-	{{ with .Resources.GetMatch "header" }}
-		<img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
-	{{ end }}
-
-{{ .Resources.Match "*" }}
-
-{{ .Resources.Match "images/screenshot2.png" }}
+<h2>Content</h1>
 
 {{ .Content }}
 
-<h2>attached images</h2>
+<h2>trying thngs out</h2>
+
+<h3>Display "header" image</h3>
+
+{{/* TODO: make into a partial  */}}
+{{ with .Resources.GetMatch "header" }}
+<img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
+{{ end }}
+
+<h3>Listing files by name</h3>
+<ul><li>
+<b>all files:</b> {{ .Resources.Match "*" }}</li>
+<li><b>specific file:</b>{{ .Resources.Match "images/screenshot2.png" }}
+</li></ul>
+
+<h3>attached images</h3>
 {{ partial "attached-images.html" . }}
 <hr />
 
 {{ partial "list-textfiles.html" . }}
-</div>
+
 
 <div class="content content--bottom">
 {{ if $.Param "relatedposts" | default false }}{{ partial "related.html" . }}{{ end -}}
@@ -32,8 +40,6 @@
 {{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
 </div>
 </article>
-
-{{ partial "build-date.html" }}
 </main>
 
 {{ end }}
