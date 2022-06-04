@@ -7,6 +7,13 @@ description = "Yet another project"
 date = "2022-06-04T03:54:00-04:00"
 lastmod = "2022-06-04T03:54:00-04:00"
 
+[[resources]]
+name = "header"
+src = "images/screenshot.png"
+
+[resources.params]
+  icon = "photo"
+
 # categories = ["Projects"]
 
 # tags = [ 
@@ -20,9 +27,21 @@ lastmod = "2022-06-04T03:54:00-04:00"
 #type = ""
 +++
 
-```markdown
+:::::::::: repo-readme.md 
+
+{{ with (.Resources.GetMatch "repo-readme.md") }}
+{{ .Content }}
+{{ end }}
+
+~~~~~~~~~ readfile
+
+{{< readfile "file.txt" >}}
+
+
+
+<!-- ```markdown
 hugo new --kind repo content/repo/0353
-```
+``` -->
 {{< param description >}}
 
 {{< img src="images/screenshot.png" alt="Example image." size="600x" >}}
@@ -43,5 +62,3 @@ hugo new --kind repo content/repo/0353
 ## attached-images
 
 {{ partial "attached-images.html" . }}
-
-xxx

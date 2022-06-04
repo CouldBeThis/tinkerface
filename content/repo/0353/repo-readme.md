@@ -27,3 +27,4 @@ more help: [howto:install_new_themes](https://wiki.xfce.org/howto:install_new_th
 ### light gtk theme
 
 ![screenshot-next-hidpi-v1.0-cropped-lwaxana.png](docs/screenshot-next-hidpi-v1.0-cropped-lwaxana.png)
+
