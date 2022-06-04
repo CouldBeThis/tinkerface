@@ -1,0 +1,14 @@
+
+{{ if not .Params.notoc }}
+<h1>TOC</h1>
+<aside>
+  <header>
+    <a href="#{{.Title | urlize}}">
+    <h3>{{.Title}}</h3>
+    </a>
+  </header>
+  {{.TableOfContents}}
+</aside>
+<a href="#" id="toc-toggle"></a>
+^^^^^
+{{ end }}
