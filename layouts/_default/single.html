@@ -12,7 +12,7 @@
 
 {{ .Content }}
 
-<h2>trying thngs out</h2>
+<h2>trying things out in `single.html`</h2>
 
 <h3>Display "header" image</h3>
 
@@ -27,10 +27,11 @@
 <li><b>specific file:</b>{{ .Resources.Match "images/screenshot2.png" }}
 </li></ul>
 
-<h3>attached images</h3>
+<h3>displaying images</h3>
 {{ partial "attached-images.html" . }}
 <hr />
 
+<h3>listing text files</h3>
 {{ partial "list-textfiles.html" . }}
 
 
