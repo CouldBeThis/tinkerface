@@ -21,6 +21,9 @@ lastmod = "{{ .Date }}"
 +++
 
 ```markdown
-hugo new --kind repo content/repo/TITLE
+hugo new --kind repo content/repo/0353
 ```
 
+
+
+(index.md)
