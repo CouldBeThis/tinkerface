@@ -33,9 +33,23 @@ src = "images/screenshot.png"
 {{ end }}
 
 
-#### working, but not processed by markdown or HTML
+#### text file
 
 {{< readfile "file.txt" >}}
+
+#### html file
+
+{{< readfile "file.html" >}}
+
+#### md file
+
+{{< readfile "file.md" >}}
+
+#### md file
+
+<div style="border: 4px dashed blue; padding: 2em;">
+{{< readfile "readme.md" >}}
+</div>
 
 🔬
 

@@ -1,9 +1,16 @@
+{{/*  WORKING with caveat that file extensions affects rendering:
+  - .txt =  totally plain
+  - .html = some rendering, but not as expected 
+  - .md =   seems to be most consistent */}}
+
 {{- with .Get 0 -}}
   {{- with $.Page.Resources.GetMatch . -}}
-    {{ .Content }} 
+  🥧 {{ .Content }} 
   {{- else -}}
     {{- errorf "Resource '%s' not found while rendering the '%s' shortcode. See %s" . $.Name $.Position -}}
   {{- end -}}
 {{- else -}}
   {{- errorf "The '%s' shortcode requires a single positional parameter. See %s" .Name .Position -}}
 {{- end -}}
+
+
