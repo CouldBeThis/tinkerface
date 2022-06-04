@@ -33,6 +33,7 @@ src = "images/screenshot.png"
 {{ .Content }}
 {{ end }}
 
+
 ~~~~~~~~~ readfile
 
 {{< readfile "file.txt" >}}
