@@ -1,50 +1,77 @@
 baseURL = "https://couldbethis.github.io/tinkerface/"
 languageCode = "en-us"
 title = "Tinkerface"
-theme = "rocinante"
-paginate = 3
+theme = "zen"
 publishDir = "docs"
 
 [markup]
   [markup.highlight]
-    # https://xyproto.github.io/splash/docs/all.html
-    # style = "monokai"
+    ## https://xyproto.github.io/splash/docs/all.html
     style = "arduino"
+    # style = "monokai"
     # style = "fruity"
   [markup.goldmark.renderer]
     unsafe= true
 
+pluralizelisttitles = false
+removePathAccents = true
+paginate = 10
+## The path element used during pagination (https://example.com/page/2)
+paginatePath = "page"
+rssLimit = 20
+
+[author]
+name = "CouldBeThis"
+# url = "https://example.org/somepage"
+# avatar = "path/to/some-image.jpg"
+
+[outputFormats.SearchIndex]
+mediaType = "application/json"
+baseName = "searchindex"
+isPlainText = true
+notAlternative = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON", "SearchIndex" ]
+section = [ "HTML", "RSS", "JSON" ]
+
 [params]
-  favicon = "/icons/favicon.png"
-   mainSections = ["project", "infos", "post", "akind"]
-#   email = "mail@example.com"
-  about = """
-About section. Enter details about you here.
-"""
 
-  [[params.links]]
-    # [[params.links.link]]
-    #   name = "Resume"
-    #   href = "/Resume.pdf"
-    [[params.links.link]]
-      name = "Email"
-      href = "/contact"
-      smart_email_link = true
+description = "A place to organize my projects"
+dateformat = "January 2, 2006"
 
-  [[params.links]]
-    [[params.links.link]]
-      name = "Github"
-      href = "https://github.com/CouldBeThis"
-      new_tab = true
-    # [[params.links.link]]
-    #   name = "Mastodon"
-    #   href = "https://mastodon.social/"
-    #   new_tab = true
-    # [[params.links.link]]
-    #   name = "Twitter"
-    #   href = "https://twitter.com/"
-    #   new_tab = true
-    # [[params.links.link]]
-    #   name = "Instagram"
-    #   href = "https://instagram.com/"
-    #   new_tab = true
+## FRONT PAGE
+##
+## Must update with sections to have them appear on main page
+mainSections = [
+    "post",
+    "infos"
+    ]
+
+## LAYOUT
+sidebar = true
+mobileMenu = true
+
+## INFORMATION TO SHOW OR HIDE
+submitted = false
+# contact = "info@example.org"
+poweredby = false
+feedlinks = true
+footer = "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen)."
+# copyright = "<!--Creative Commons License-->This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).<!--/Creative Commons License-->"
+
+## STYLE
+favicon = "apple-touch-icon.png"
+themeColor = "#fc54a8"
+icon = "apple-touch-icon.png"
+image = "apple-touch-icon.png"
+realfavicongenerator = "true"
+# logo = "false"
+# imageMaxWidth = 400
+
+## MAY NOT WORK IN ZEN THEME
+#   [[params.links]]
+#     [[params.links.link]]
+#       name = "Github"
+#       href = "https://github.com/CouldBeThis"
+#       new_tab = true
