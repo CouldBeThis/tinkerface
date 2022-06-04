@@ -59,7 +59,7 @@ src = "images/screenshot.png"
 
 ### 🔬 insert a specific image
 
-{{< img src="images/screenshot.png" alt="Example image." size="600x" >}}
+{{< img src="images/screenshot.png" alt="Example image." size="600px" >}}
 
 
 ### 🔬 doens't work
