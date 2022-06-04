@@ -1,0 +1,6 @@
+{{/*  WORKS as intended  */}}
+
+These are the `*.txt` files in the same dirctory as this post:
+{{ range .Resources.Match "*.txt" -}}
+<a href="{{ . }}">📙 {{ . }}</a>
+{{ end -}}

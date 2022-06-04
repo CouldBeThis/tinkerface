@@ -8,17 +8,14 @@
 </header>
 <div class="content">
 
-	!!!!! repo
+{{/* make into a partial   */}}
+	{{ with .Resources.GetMatch "header" }}
+		<img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
+	{{ end }}
 
-	[][][][][][][] 
+{{ .Resources.Match "*" }}
 
-	===== .GetMatch "header"
-
-{{ with .Resources.GetMatch "header" }}
-  <img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
-{{ end }}
-
-{{ .Resources.Match "images/*" }}
+{{ .Resources.Match "images/screenshot2.png" }}
 
 {{ .Content }}
 
@@ -26,7 +23,7 @@
 {{ partial "attached-images.html" . }}
 <hr />
 
-{{ partial "attached-readme.html" . }}
+{{ partial "list-textfiles.html" . }}
 </div>
 
 <div class="content content--bottom">
