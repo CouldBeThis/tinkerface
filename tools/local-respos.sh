@@ -81,6 +81,10 @@ fd \
 ## TODO: Use `hugo new` to create posts that do NOT already exist.
 
 
+## TODO: Construct git query + use sed to generate the information
+#git config --get remote.origin.url 
+## RESULT:
+## git@github.com:CouldBeThis/tinkerface.git
 
 
 
