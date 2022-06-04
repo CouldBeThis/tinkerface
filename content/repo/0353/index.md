@@ -11,9 +11,6 @@ lastmod = "2022-06-04T03:54:00-04:00"
 name = "header"
 src = "images/screenshot.png"
 
-[resources.params]
-  icon = "photo"
-
 # categories = ["Projects"]
 
 # tags = [ 
@@ -27,39 +24,30 @@ src = "images/screenshot.png"
 #type = ""
 +++
 
-:::::::::: repo-readme.md 
+### 🔬 insert text file content
+
+#### not working
 
 {{ with (.Resources.GetMatch "repo-readme.md") }}
 {{ .Content }}
 {{ end }}
 
 
-~~~~~~~~~ readfile
+#### working, but not processed by markdown or HTML
 
 {{< readfile "file.txt" >}}
 
+🔬
 
+### 🔬 print description param from front matter
 
-<!-- ```markdown
-hugo new --kind repo content/repo/0353
-``` -->
 {{< param description >}}
+
+### 🔬 insert a specific image
 
 {{< img src="images/screenshot.png" alt="Example image." size="600x" >}}
 
-## resources?
 
-{{ .Resources.Match "images/*" }}
+### 🔬 doens't work
 
-## file
-
-{{< file "readme.md" >}}
-
-
-## source
-
-(index.md)
-
-## attached-images
-
-{{ partial "attached-images.html" . }}
+{{< file "file.txt" >}}
