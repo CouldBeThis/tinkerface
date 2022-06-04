@@ -1,5 +1,6 @@
-{{/*  WORKS as intended  */}}
+{{/*  WORKS as intended, mostly
+	Problem only when an image is specified in the front matter.  */}}
 
 {{ range .Resources.ByType "image" -}}
-<a href="{{ . }}"><img src="{{ . }}"></a>
+<a href="{{ . }}"><img src="{{ . }}"></a> : "{{ . }}"
 {{ end -}}
