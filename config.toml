@@ -16,7 +16,7 @@ publishDir = "docs"
 
 [params]
   favicon = "/icons/favicon.png"
-  mainSections = ["projects", "infos", "post"]
+   mainSections = ["project", "infos", "post", "akind"]
 #   email = "mail@example.com"
   about = """
 About section. Enter details about you here.
