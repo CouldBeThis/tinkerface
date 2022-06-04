@@ -7,48 +7,54 @@ clear
 	DateStamp=$(date +"%y%m%d")
 	DatePlain=$(date)
 ###	Metadata 
-	WorkingDir=$PWD
+	ScriptDir=$PWD
 	ThisScript=$(basename "$0")
 	CurrentUser=$(whoami)
 ###	Reminder
 	# SomeVariable="value"
 	# shellcheck disable=SC2034  # "appears unused. Verify it or export it."
 
-###	Text styles
+###	Text s
 	## Bold
-	StyleBold=$(tput smso)
-	StyleBoldOff=$(tput rmso)
+	Bold=$(tput smso)
+	BoldOff=$(tput rmso)
 	## Reverse
-	StyleRev=$(tput rev)
+	Rev=$(tput rev)
 	## reset all attributes
-	StyleAllOff=$(tput sgr0)
+	AllOff=$(tput sgr0)
 	## Set some colors
-	StyleFGBlue=$(tput setaf 4)		# text			= blue
-	StyleFGBrWhite=$(tput setaf 15)	# text 			= bright white
-	StyleBGWhite=$(tput setab 7)	# background	= white
-	StyleBGBlue=$(tput setab 4)		# background	= blue
-
-
-
+	FGBlue=$(tput setaf 4)		# text			= blue
+	FGBrWhite=$(tput setaf 15)	# text 			= bright white
+	BGWhite=$(tput setab 7)	# background	= white
+	BGBlue=$(tput setab 4)		# background	= blue
 
 tabs -10
-echo " "
-echo "$StyleRev ⎡BRIGHT fg⎤ $StyleAllOff ┠───────────────────────────────╖"
-echo "┃ $StyleFGBlue$StyleSpacer$StyleU\$StyleFGBlue$StyleUOff	is ANSI #4	▶︎ $StyleAllOff ▶︎ ╢"
+# echo " "
+# echo "$Rev ⎡BRIGHT fg⎤ $AllOff ┠───────────────────────────────╖"
+# echo "┃ $FGBlue$Spacer$U\$FGBlue$UOff	is ANSI #4	▶︎ $AllOff ▶︎ ╢"
+# echo "┃ $FGBrBlack$Spacer$U\$FGBrBlack$UOff	is ANSI #15	▶︎ $AllOff ▶︎  ║"
+# echo "┃ $BGWhite$Spacer$U\$BGWhite$UOff	is ANSI #7	▶︎ $AllOff ▶︎"
+# echo "┃ $BGBlue$Spacer$U\$BGBlue$UOff	is ANSI #4	▶︎ $AllOff ▶︎"
+# echo "$Rev ⎡BRIGHT fg⎤ $AllOff ┣══════════════════════════════╝"
 
-echo "┃ $StyleFGBrBlack$StyleSpacer$StyleU\$StyleFGBrBlack$StyleUOff	is ANSI #15	▶︎ $StyleAllOff ▶︎  ║"
+echo "$FGBlue ScriptDir is $AllOff" $ScriptDir
 
-echo "┃ $StyleBGWhite$StyleSpacer$StyleU\$StyleBGWhite$StyleUOff	is ANSI #7	▶︎ $StyleAllOff ▶︎"
+cd ../../localrepos
+ReposDir=$PWD
 
-echo "┃ $StyleBGBlue$StyleSpacer$StyleU\$StyleBGBlue$StyleUOff	is ANSI #4	▶︎ $StyleAllOff ▶︎"
-echo "$StyleRev ⎡BRIGHT fg⎤ $StyleAllOff ┣══════════════════════════════╝"
+echo "$FGBlue ReposDir is $AllOff" $ReposDir
 
-	
-	
-	
-	
-	
-	
+echo "$FGBlue List of readmes: $AllOff"
+
+fd \
+    --ignore-case \
+    --follow \
+    --min-depth 1 \
+    --max-depth 1 \
+    readme.md */ \
+    # --print0
+
+
 	
 	
 	
