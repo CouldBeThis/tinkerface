@@ -81,13 +81,19 @@ fd \
 ## TODO: Use `hugo new` to create posts that do NOT already exist.
 
 
-## TODO: Construct git query + use sed to generate the information
+## TODO: Construct git query + use sed to generate the repo URL
 #git config --get remote.origin.url 
 ## RESULT:
 ## git@github.com:CouldBeThis/tinkerface.git
 
 
+## TODO: Clone URL (+/- submodules)
 
+## TODO: Date created
+
+## TODO: Date last modified
+
+## TODO: Simple: Link to issues. 
 
 
 
