@@ -1,0 +1,11 @@
+
+[34mRepository    [36m:[00m  [02m/home/un/cbt/tinkerface/[00mtinkerface[00m
+[34mDescription   [36m:[00m  Unnamed repository; edit this file 'description' to name the repository.
+
+[35mAge           [36m:[00m  2 days 
+[35mActive days   [36m:[00m  5
+[35mCommit count  [36m:[00m  38
+[35mFile count    [36m:[00m  84
+
+[32mAuthors       [36m:[00m  100.00%     38	CouldBeThis
+                 
