@@ -1,3 +1,5 @@
+{{/*  WORKS as intended  */}}
+
 {{ range .Resources.ByType "image" -}}
 <a href="{{ . }}"><img src="{{ . }}"></a>
 {{ end -}}
