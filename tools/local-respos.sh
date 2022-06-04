@@ -65,7 +65,7 @@ fd \
 
 echo "============="
 echo "$FGBlue List of readmes: $AllOff"
-echo "$FGBlue xarg: $AllOff"
+echo "$FGBlue use xargs to print directory names only: $AllOff"
 fd \
 	--ignore-case \
 	--follow \
@@ -76,16 +76,21 @@ fd \
 		xargs \
 		-I @ \
 		-0 \
-		echo "@"
+		dirname "@"
+
+## TODO: Use `hugo new` to create posts that do NOT already exist.
 
 
-# ThisScript=$(basename "$0")
 
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
