@@ -1,0 +1,11 @@
+{{/*  WORKS as intended  */}}
+
+{{/*
+source: https://www.ii.com/hugo-shortcodes/#_3_build_date
+USAGE:
+  {{ partial "build-date.html" }}
+Path: layouts/shortcodes/build-date.html
+Purpose: display current date
+*/}}
+
+<p><b>page build date: &nbsp;</b> {{- now.Format "Monday Jan 2, 2006, 2:00 am" -}}</p>

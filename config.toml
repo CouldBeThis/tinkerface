@@ -19,11 +19,13 @@ paginate = 10
 ## The path element used during pagination (https://example.com/page/2)
 paginatePath = "page"
 rssLimit = 20
+enableInlineShortcodes = true
 
 [author]
 name = "CouldBeThis"
 # url = "https://example.org/somepage"
 # avatar = "path/to/some-image.jpg"
+  ghrepo = "CouldBeThis/xxx"
 
 [outputFormats.SearchIndex]
 mediaType = "application/json"

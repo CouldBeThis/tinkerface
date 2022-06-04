@@ -1,0 +1,1 @@
+[35m[K./layouts/_default/single.html[m[K[36m[K:[m[K[32m[K19[m[K[36m[K:[m[K{{/* [01;33m[KTODO[m[K: make into a partial  */}}

@@ -1,0 +1,6 @@
+{{/*  not functional  */}}
+Text list of md files:
+{{ range .Resources.Match "*.md" -}}
+<a href="{{ . }}">{{ . }}</a>
+
+{{ end -}}

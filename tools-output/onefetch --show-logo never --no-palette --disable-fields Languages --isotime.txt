@@ -1,0 +1,12 @@
+[34;1mCouldBeThis[0m [39;1m~[0m [34;1mgit version 2.36.1[0m
+[39m--------------------------------[39m
+[34;1mProject[0m[39;1m:[0m [39mtinkerface (4 branches)[39m
+[34;1mHEAD[0m[39;1m:[0m [39mcb40376 (archetype-bundles)[39m
+[34;1mPending[0m[39;1m:[0m [39m3+[39m
+[34;1mCreated[0m[39;1m:[0m [39m2022-06-03T01:33:52Z[39m
+[34;1mAuthor[0m[39;1m:[0m [39m100% CouldBeThis 38[39m
+[34;1mLast change[0m[39;1m:[0m [39m2022-06-04T14:04:15Z[39m
+[34;1mRepo[0m[39;1m:[0m [39mgit@github.com:CouldBeThis/tinkerface.git[39m
+[34;1mCommits[0m[39;1m:[0m [39m38[39m
+[34;1mLines of code[0m[39;1m:[0m [39m12713[39m
+[34;1mSize[0m[39;1m:[0m [39m1.74 MiB (84 files)[39m

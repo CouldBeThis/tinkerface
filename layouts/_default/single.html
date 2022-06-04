@@ -1,0 +1,46 @@
+{{ define "main" -}}
+<main class="main layout__main">
+<article class="single-view{{ with .Section }} single-view--{{ . | urlize }}{{ end }}">
+<header>
+<h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
+{{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . }}{{ end -}}
+{{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
+</header>
+<div class="content">
+
+<h2>Content</h1>
+
+{{ .Content }}
+
+<h2>trying things out in `single.html`</h2>
+
+<h3>Display "header" image</h3>
+
+{{/* TODO: make into a partial  */}}
+{{ with .Resources.GetMatch "header" }}
+<img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
+{{ end }}
+
+<h3>Listing files by name</h3>
+<ul><li>
+<b>all files:</b> {{ .Resources.Match "*" }}</li>
+<li><b>specific file:</b>{{ .Resources.Match "images/screenshot2.png" }}
+</li></ul>
+
+<h3>displaying images</h3>
+{{ partial "attached-images.html" . }}
+<hr />
+
+<h3>listing text files</h3>
+{{ partial "list-textfiles.html" . }}
+
+
+<div class="content content--bottom">
+{{ if $.Param "relatedposts" | default false }}{{ partial "related.html" . }}{{ end -}}
+
+{{ if ne .Lastmod .Date }}{{ partial "dates.html" . }}{{ end -}}
+</div>
+</article>
+</main>
+
+{{ end }}
