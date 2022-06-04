@@ -37,15 +37,24 @@ tabs -10
 # echo "┃ $BGBlue$Spacer$U\$BGBlue$UOff	is ANSI #4	▶︎ $AllOff ▶︎"
 # echo "$Rev ⎡BRIGHT fg⎤ $AllOff ┣══════════════════════════════╝"
 
+cd $ScriptDir
 echo "$FGBlue ScriptDir is $AllOff" $ScriptDir
 
+cd $ScriptDir
+cd ..
+HugoDir=$PWD
+echo "$FGBlue HugoDir is $AllOff" $HugoDir
+HugoContentDir=$HugoDir/content
+echo "$FGBlue HugoContentDir is $AllOff" $HugoContentDir
+
+
+cd $ScriptDir
 cd ../../localrepos
 ReposDir=$PWD
-
 echo "$FGBlue ReposDir is $AllOff" $ReposDir
 
+echo "-----------------"
 echo "$FGBlue List of readmes: $AllOff"
-
 fd \
     --ignore-case \
     --follow \
@@ -54,6 +63,23 @@ fd \
     readme.md */ \
     # --print0
 
+echo "============="
+echo "$FGBlue List of readmes: $AllOff"
+echo "$FGBlue xarg: $AllOff"
+fd \
+	--ignore-case \
+	--follow \
+	--min-depth 1 \
+	--max-depth 1 \
+	readme.md */ \
+	--print0 |
+		xargs \
+		-I @ \
+		-0 \
+		echo "@"
+
+
+# ThisScript=$(basename "$0")
 
 	
 	
