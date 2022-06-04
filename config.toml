@@ -19,6 +19,7 @@ paginate = 10
 ## The path element used during pagination (https://example.com/page/2)
 paginatePath = "page"
 rssLimit = 20
+enableInlineShortcodes = true
 
 [author]
 name = "CouldBeThis"
